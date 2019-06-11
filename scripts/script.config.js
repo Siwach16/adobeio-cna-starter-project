@@ -17,10 +17,10 @@ const utils = require('./script.utils')
 const rootDir = path.join(__dirname, '..')
 
 const packagejson = require(path.join(rootDir, 'package.json'))
-
+if(!process.env.Jenkins){
 // env variables
 require('dotenv').config({ path: path.join(rootDir, '.env') })
-
+}
 // config
 const config = {}
 /// dotenv
